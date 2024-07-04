@@ -1,22 +1,57 @@
-import { NavLink } from "react-router-dom";
-import Resume from '../../assets/Resume/Resume.pdf'
+import { NavLink, useLocation } from "react-router-dom";
+import Resume from "../../assets/Resume/Resume.pdf";
+import "./Navbar.css"; // Import your CSS file
+
 function Navbar() {
-    const NavLinks = (
-      <>
-        <li  className="hover:text-primary-color">
-          <NavLink to={'/'}>Home</NavLink>
-        </li>
-        <li className="hover:text-primary-color">
-          <NavLink to={'/aboutme'}>About Me</NavLink>
-        </li>
-        <li className="hover:text-primary-color">
-          <NavLink to={'/projects'}>Projects</NavLink>
-        </li>
-        <li className="hover:text-primary-color">
-          <NavLink to={'/skills'}>Skills</NavLink>
-        </li>
-      </>
-    );
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
+
+  const NavLinks = (
+    <>
+      <li className="nav-item">
+        <NavLink
+          to="/"
+          className={`hover:text-primary-color ${
+            isActive("/") ? "text-primary-color" : ""
+          }`}
+        >
+          Home
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink
+          to="/aboutme"
+          className={`hover:text-primary-color ${
+            isActive("/aboutme") ? "text-primary-color" : ""
+          }`}
+        >
+          About Me
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink
+          to="/projects"
+          className={`hover:text-primary-color ${
+            isActive("/projects") ? "text-primary-color" : ""
+          }`}
+        >
+          Projects
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink
+          to="/skills"
+          className={`hover:text-primary-color ${
+            isActive("/skills") ? "text-primary-color" : ""
+          }`}
+        >
+          Skills
+        </NavLink>
+      </li>
+    </>
+  );
+
   return (
     <div className="px-4 md:px-20 lg:px-28">
       <div className="navbar bg-base-100">
@@ -48,16 +83,16 @@ function Navbar() {
           <a className="btn btn-ghost text-xl">daisyUI</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu-horizontal px-1 space-x-6">
-           {NavLinks}
-          </ul>
+          <ul className="menu-horizontal px-1 space-x-6">{NavLinks}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn bg-primary-color text-white" href={Resume} download>Resume</a>
-          <a className="btn">Button</a>
+          <a className="btn bg-primary-color text-white" href={Resume} download>
+            Resume
+          </a>
         </div>
       </div>
     </div>
   );
 }
-export default Navbar
+
+export default Navbar;
