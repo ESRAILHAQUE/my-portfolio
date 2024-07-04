@@ -1,24 +1,24 @@
 import { NavLink } from "react-router-dom";
-
+import Resume from '../../assets/Resume/Resume.pdf'
 function Navbar() {
     const NavLinks = (
       <>
-        <li  className="hover:text-[#007BFF]">
+        <li  className="hover:text-primary-color">
           <NavLink to={'/'}>Home</NavLink>
         </li>
-        <li className="hover:text-[#007BFF]">
+        <li className="hover:text-primary-color">
           <NavLink to={'/aboutme'}>About Me</NavLink>
         </li>
-        <li className="hover:text-[#007BFF]">
+        <li className="hover:text-primary-color">
           <NavLink to={'/projects'}>Projects</NavLink>
         </li>
-        <li className="hover:text-[#007BFF]">
+        <li className="hover:text-primary-color">
           <NavLink to={'/skills'}>Skills</NavLink>
         </li>
       </>
     );
   return (
-    <div>
+    <div className="px-4 md:px-20 lg:px-28">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -53,6 +53,7 @@ function Navbar() {
           </ul>
         </div>
         <div className="navbar-end">
+          <a className="btn bg-primary-color text-white" href={Resume} download>Resume</a>
           <a className="btn">Button</a>
         </div>
       </div>
