@@ -12,7 +12,7 @@ function AboutMe() {
       <div className="w-full">
         <img src={img1} alt="" />
       </div>
-      <div className='w-full'>
+      <div className="w-full">
         <div className="mb-4 w-full">
           <button
             className={`btn skills-btn mr-4 text-primary-color border border-primary-color ${
@@ -34,7 +34,6 @@ function AboutMe() {
         <div className="w-full h-full transition-all 3s ease-in-out">
           {selectedSection === "Personal" && (
             <div>
-             
               <p className="text-justify">
                 I am Esrail Haque, a dedicated React Developer and Front-End Web
                 Developer with over 2 years of experience. As an expert in
@@ -47,17 +46,19 @@ function AboutMe() {
           {selectedSection === "Educational" && (
             <div className="text-justify">
               <p>
-                <span className="font-bold">JSC: </span> I completed my Junior
-                School Certificate in November 2015. My GPA was 5.00 out of 5.00
+                <span className="font-bold">SSC:</span> I completed my Secondary
+                School Certificate in November 2018 with a GPA of 5.00 out of
+                5.00.
               </p>
               <p>
-                <span className="font-bold">SSC: </span> I completed my
-                Secondary School Certificate in November 2018. My GPA was 5.00
-                out of 5.00
+                <span className="font-bold">HSC:</span> I completed my Higher
+                School Certificate in November 2020 with a GPA of 5.00 out of
+                5.00.
               </p>
               <p>
-                <span className="font-bold">HSC: </span> I completed my Higher
-                School Certificate in November 2020. My GPA was 5.00 out of 5.00
+                <span className="font-bold">BSc in Engineering:</span> I am
+                currently pursuing a Bachelor's degree in Electrical and
+                Electronics Engineering.
               </p>
             </div>
           )}

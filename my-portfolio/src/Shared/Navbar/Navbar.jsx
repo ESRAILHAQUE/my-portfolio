@@ -80,7 +80,7 @@ function Navbar() {
               {NavLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu-horizontal px-1 space-x-6">{NavLinks}</ul>
